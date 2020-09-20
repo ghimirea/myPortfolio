@@ -34,10 +34,32 @@ h2 {
   font-family: 'Caveat', cursive;
   margin: 0;
 }
+h3 {
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
 .content-wrap {
   width: 800px;
   margin: 0 auto;
   padding: 60px 0;
+}
+
+.item-details h3 + p {
+  font-style: italic;
+}
+
+.item-details h3 ~ p {
+  margin: 0;
+}
+
+.divider > section {
+  border-bottom: 1px dotted #2f3061;
+  padding: 25px, 0;
+}
+
+.divider > section:last-of-type {
+  border-bottom: none;
 }
 
 /* Profile
@@ -45,6 +67,7 @@ h2 {
 header {
   background: #2f3061; /*Dark Blue */
   color: #f7fff7; /* Almost White */
+  text-align: center;
 }
 
 /* Projects
@@ -73,7 +96,6 @@ header {
 
 .project-item {
   overflow: hidden;
-  border-bottom: 1px dotted #2f3061;
 }
 
 .project-item img {
@@ -91,6 +113,12 @@ header {
   background: #a1c6d7; /* Light blue */
 }
 
+.job-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 20px;
+}
+
 /* Education
 -----------------------------------*/
 
@@ -99,4 +127,17 @@ header {
 footer {
   background: #343434; /*Dark Grey*/
   color: #f7fff7; /* Almost White */
+  text-align: center;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-list a {
+  padding: 10px;
+  display: inline-block;
 }
